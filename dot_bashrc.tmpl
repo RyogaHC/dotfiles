@@ -16,6 +16,7 @@ alias cb='xsel -b'
 {{ end }}
 
 {{ if (eq .chezmoi.arch "arm64") }}
+export PATH="~/.bin"
 cb() {
 	if [ -t 0 ]; then
 		termux-clipboard-get
