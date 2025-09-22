@@ -1,0 +1,16 @@
+#!/bin/bash
+if [ -z "${PIPING_SERVER_URL}" ]; then
+	PIPING_SERVER_URL="https://ppng.io"
+fi
+
+if [ -z "$1" ]; then
+	PIPING_SERVER_PATH="$(cat $HOME/.ppng-path)"
+else
+	PIPING_SERVER_PATH="$1"
+fi
+
+if [ -t 0 ]; then
+	curl -s "$PIPING_SERVER_URL/$PIPING_SERVER_PATH"
+else
+	curl -s -T - "$PIPING_SERVER_URL/$PIPING_SERVER_PATH"
+fi
