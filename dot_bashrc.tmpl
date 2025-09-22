@@ -1,0 +1,27 @@
+export EDITOR='nvim'
+set -o vi
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+eval "$(fzf --bash)"
+
+export PS1="\[\e[34m\]\u@\h\[\e[m\]:\[\e[31m\]\w\[\e[m\]\$ "
+
+{{ if (eq .chezmoi.arch "amd64") }}
+export PATH="$PATH:/opt/freerdp-nightly/bin:/home/ryoga/.bin:~/bin"
+export PATH=/home/ryoga/.local/bin:/home/ryoga/venv/bin:$PATH
+. "/home/ryoga/.deno/env"
+
+alias cb='xsel -b'
+{{ end }}
+
+{{ if (eq .chezmoi.arch "arm64") }}
+cb() {
+	if [ -t 0 ]; then
+		termux-clipboard-get
+	else
+		termux-clipboard-set
+	fi
+
+}
+{{ end }}
