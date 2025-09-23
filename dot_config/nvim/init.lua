@@ -1,5 +1,5 @@
 if vim.g.neovide then
-	vim.g.neovide_scale_factor= 0.7
+	vim.g.neovide_scale_factor= 0.6
 	vim.g.neovide_scroll_animation_length = 0.1
 	vim.g.neovide_position_animation_length = 0.1
 end
@@ -12,6 +12,9 @@ vim.o.termguicolors = true
 vim.o.background = 'dark'
 vim.g.mapleader = ' '
 vim.o.mouse = ''
+
+vim.keymap.set('n', '<C-h>', ':bprevious<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-l>', ':bnext<CR>', { noremap = true, silent = true })
 
 local vim = vim
 local Plug = vim.fn['plug#']
