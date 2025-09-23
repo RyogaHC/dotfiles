@@ -2,6 +2,8 @@ if vim.g.neovide then
 	vim.g.neovide_scale_factor= 0.5
 	vim.g.neovide_scroll_animation_length = 0.1
 	vim.g.neovide_position_animation_length = 0.1
+	vim.g.neovide_opacity = 0.8
+	vim.g.neovide_normal_opacity = 0.8
 end
 
 vim.o.number = true
