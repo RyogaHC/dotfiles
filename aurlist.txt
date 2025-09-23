@@ -1,0 +1,4 @@
+deno-canary-bin
+deno-canary-bin-debug
+yay
+yay-debug
