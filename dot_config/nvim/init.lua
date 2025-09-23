@@ -38,6 +38,7 @@ Plug('tpope/vim-repeat')
 Plug('NStefan002/screenkey.nvim')
 Plug('David-Kunz/gen.nvim')
 Plug('chomosuke/typst-preview.nvim')
+Plug('akinsho/toggleterm.nvim')
 
 Plug('neovim/nvim-lspconfig')
 Plug('hrsh7th/cmp-nvim-lsp')
@@ -52,6 +53,10 @@ vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find f
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
 vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
+
+require("toggleterm").setup{
+	open_mapping = [[<c-t>]]
+}
 
 require('Comment').setup()
 require('leap').set_default_mappings()
