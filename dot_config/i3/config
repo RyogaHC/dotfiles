@@ -191,6 +191,8 @@ bindsym $mod+r mode "resize"
 #         status_command i3status
 # }
 
+bindsym Print exec --no-startup-id scrot ~/Pictures/$(date +%Y%m%d-%H%M%S).png
+
 exec --no-startup-id polybar
 
 title_align center
