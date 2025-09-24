@@ -43,6 +43,7 @@ Plug('chomosuke/typst-preview.nvim')
 Plug('akinsho/toggleterm.nvim')
 Plug('HiPhish/rainbow-delimiters.nvim')
 Plug('nvimdev/dashboard-nvim')
+Plug('norcalli/nvim-colorizer.lua')
 
 Plug('neovim/nvim-lspconfig')
 Plug('hrsh7th/cmp-nvim-lsp')
@@ -84,6 +85,8 @@ require('dashboard').setup{
 		header = logo
 	}
 }
+
+require('colorizer').setup()
 
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
