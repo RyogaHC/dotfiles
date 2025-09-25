@@ -44,7 +44,7 @@ Plug('akinsho/toggleterm.nvim')
 Plug('HiPhish/rainbow-delimiters.nvim')
 Plug('nvimdev/dashboard-nvim')
 Plug('norcalli/nvim-colorizer.lua')
-
+Plug('nvim-orgmode/orgmode')
 Plug('neovim/nvim-lspconfig')
 Plug('hrsh7th/cmp-nvim-lsp')
 Plug('hrsh7th/cmp-buffer')
@@ -52,32 +52,13 @@ Plug('hrsh7th/cmp-path')
 Plug('hrsh7th/cmp-cmdline')
 Plug('hrsh7th/nvim-cmp')
 vim.call('plug#end')
-
--- local logo = {
--- "╔═╗ ╔╗                                ╔═══╗       ╔╗      ╔╗                 ╔╗╔╗",
--- "║║╚╗║║                                ║╔═╗║       ║║      ║║                 ║║║║",
--- "║╔╗╚╝║╔══╗╔══╗╔╗╔╗╔╗╔╗╔╗    ╔╗╔═╗     ║║ ║║╔═╗╔══╗║╚═╗    ║║   ╔╗╔═╗ ╔╗╔╗╔╗╔╗║║║║",
--- "║║╚╗║║║╔╗║║╔╗║║╚╝║╠╣║╚╝║    ╠╣║╔╗╗    ║╚═╝║║╔╝║╔═╝║╔╗║    ║║ ╔╗╠╣║╔╗╗║║║║╚╬╬╝╚╝╚╝",
--- "║║ ║║║║║═╣║╚╝║╚╗╔╝║║║║║║    ║║║║║║    ║╔═╗║║║ ║╚═╗║║║║    ║╚═╝║║║║║║║║╚╝║╔╬╬╗╔╗╔╗",
--- "╚╝ ╚═╝╚══╝╚══╝ ╚╝ ╚╝╚╩╩╝    ╚╝╚╝╚╝    ╚╝ ╚╝╚╝ ╚══╝╚╝╚╝    ╚═══╝╚╝╚╝╚╝╚══╝╚╝╚╝╚╝╚╝",
--- }
-
--- local logo = {
--- "    ╔═╗ ╔╗                      ╔══╗        ╔═══╗       ╔╗      ╔╗                     ╔╗╔╗╔╗",
--- "    ║║╚╗║║                      ╚╣╠╝        ║╔═╗║       ║║      ║║                     ║║║║║║",
--- "    ║╔╗╚╝║╔══╗╔══╗╔╗╔╗╔╗╔╗╔╗     ║║ ╔═╗     ║║ ║║╔═╗╔══╗║╚═╗    ║║   ╔╗╔═╗ ╔╗╔╗╔╗╔╗    ║║║║║║",
--- "    ║║╚╗║║║╔╗║║╔╗║║╚╝║╠╣║╚╝║     ║║ ║╔╗╗    ║╚═╝║║╔╝║╔═╝║╔╗║    ║║ ╔╗╠╣║╔╗╗║║║║╚╬╬╝    ╚╝╚╝╚╝",
--- "    ║║ ║║║║║═╣║╚╝║╚╗╔╝║║║║║║    ╔╣╠╗║║║║    ║╔═╗║║║ ║╚═╗║║║║    ║╚═╝║║║║║║║║╚╝║╔╬╬╗    ╔╗╔╗╔╗",
--- "    ╚╝ ╚═╝╚══╝╚══╝ ╚╝ ╚╝╚╩╩╝    ╚══╝╚╝╚╝    ╚╝ ╚╝╚╝ ╚══╝╚╝╚╝    ╚═══╝╚╝╚╝╚╝╚══╝╚╝╚╝    ╚╝╚╝╚╝",
--- }
-
 local logo = {
-"╔═╗ ╔╗╔═══╗╔═══╗╔╗  ╔╗╔══╗╔═╗╔═╗              ╔═══╗       ╔╗      ╔╗                     ╔╗╔╗╔╗",
-"║║╚╗║║║╔══╝║╔═╗║║╚╗╔╝║╚╣╠╝║║╚╝║║              ║╔═╗║       ║║      ║║                     ║║║║║║",
-"║╔╗╚╝║║╚══╗║║ ║║╚╗║║╔╝ ║║ ║╔╗╔╗║    ╔╗╔═╗     ║║ ║║╔═╗╔══╗║╚═╗    ║║   ╔╗╔═╗ ╔╗╔╗╔╗╔╗    ║║║║║║",
-"║║╚╗║║║╔══╝║║ ║║ ║╚╝║  ║║ ║║║║║║    ╠╣║╔╗╗    ║╚═╝║║╔╝║╔═╝║╔╗║    ║║ ╔╗╠╣║╔╗╗║║║║╚╬╬╝    ╚╝╚╝╚╝",
-"║║ ║║║║╚══╗║╚═╝║ ╚╗╔╝ ╔╣╠╗║║║║║║    ║║║║║║    ║╔═╗║║║ ║╚═╗║║║║    ║╚═╝║║║║║║║║╚╝║╔╬╬╗    ╔╗╔╗╔╗",
-"╚╝ ╚═╝╚═══╝╚═══╝  ╚╝  ╚══╝╚╝╚╝╚╝    ╚╝╚╝╚╝    ╚╝ ╚╝╚╝ ╚══╝╚╝╚╝    ╚═══╝╚╝╚╝╚╝╚══╝╚╝╚╝    ╚╝╚╝╚╝",
+	"╔═╗ ╔╗╔═══╗╔═══╗╔╗  ╔╗╔══╗╔═╗╔═╗              ╔═══╗       ╔╗      ╔╗                     ╔╗╔╗╔╗",
+	"║║╚╗║║║╔══╝║╔═╗║║╚╗╔╝║╚╣╠╝║║╚╝║║              ║╔═╗║       ║║      ║║                     ║║║║║║",
+	"║╔╗╚╝║║╚══╗║║ ║║╚╗║║╔╝ ║║ ║╔╗╔╗║    ╔╗╔═╗     ║║ ║║╔═╗╔══╗║╚═╗    ║║   ╔╗╔═╗ ╔╗╔╗╔╗╔╗    ║║║║║║",
+	"║║╚╗║║║╔══╝║║ ║║ ║╚╝║  ║║ ║║║║║║    ╠╣║╔╗╗    ║╚═╝║║╔╝║╔═╝║╔╗║    ║║ ╔╗╠╣║╔╗╗║║║║╚╬╬╝    ╚╝╚╝╚╝",
+	"║║ ║║║║╚══╗║╚═╝║ ╚╗╔╝ ╔╣╠╗║║║║║║    ║║║║║║    ║╔═╗║║║ ║╚═╗║║║║    ║╚═╝║║║║║║║║╚╝║╔╬╬╗    ╔╗╔╗╔╗",
+	"╚╝ ╚═╝╚═══╝╚═══╝  ╚╝  ╚══╝╚╝╚╝╚╝    ╚╝╚╝╚╝    ╚╝ ╚╝╚╝ ╚══╝╚╝╚╝    ╚═══╝╚╝╚╝╚╝╚══╝╚╝╚╝    ╚╝╚╝╚╝",
 }
 
 require('dashboard').setup{
@@ -225,39 +206,35 @@ vim.lsp.enable('nil_ls')
 vim.lsp.enable('tinymist')
 vim.lsp.enable('pylsp')
 
--- require('lspconfig').nil_ls.setup{}
--- require('lspconfig').tinymist.setup{}
--- require('lspconfig').pylsp.setup{}
+require('gen').setup({
+	model = "gpt-oss", -- The default model to use.
+	quit_map = "q", -- set keymap to close the response window
+	retry_map = "<c-r>", -- set keymap to re-send the current prompt
+	accept_map = "<c-cr>", -- set keymap to replace the previous selection with the last result
+	host = "localhost", -- The host running the Ollama service.
+	port = "11434", -- The port on which the Ollama service is listening.
+	display_mode = "float", -- The display mode. Can be "float" or "split" or "horizontal-split" or "vertical-split".
+	show_prompt = false, -- Shows the prompt submitted to Ollama. Can be true (3 lines) or "full".
+	show_model = false, -- Displays which model you are using at the beginning of your chat session.
+	no_auto_close = false, -- Never closes the window automatically.
+	file = false, -- Write the payload to a temporary file to keep the command short.
+	hidden = false, -- Hide the generation window (if true, will implicitly set `prompt.replace = true`), requires Neovim >= 0.10
+	init = function(options) pcall(io.popen, "ollama serve > /dev/null 2>&1 &") end,
+	-- Function to initialize Ollama
+	command = function(options)
+		local body = {model = options.model, stream = true}
+		return "curl --silent --no-buffer -X POST http://" .. options.host .. ":" .. options.port .. "/api/chat -d $body"
+	end,
+	-- The command for the Ollama service. You can use placeholders $prompt, $model and $body (shellescaped).
+	-- This can also be a command string.
+	-- The executed command must return a JSON object with { response, context }
+	-- (context property is optional).
+	-- list_models = '<omitted lua function>', -- Retrieves a list of model names
+	result_filetype = "markdown", -- Configure filetype of the result buffer
+	debug = false -- Prints errors and the command which is run.
+})
 
--- vim.api.nvim_create_autocmd("VimEnter",
--- {
-	-- 	callback = function() require("screenkey").toggle() end
-	-- })
-
-	require('gen').setup({
-		model = "gpt-oss", -- The default model to use.
-		quit_map = "q", -- set keymap to close the response window
-		retry_map = "<c-r>", -- set keymap to re-send the current prompt
-		accept_map = "<c-cr>", -- set keymap to replace the previous selection with the last result
-		host = "localhost", -- The host running the Ollama service.
-		port = "11434", -- The port on which the Ollama service is listening.
-		display_mode = "float", -- The display mode. Can be "float" or "split" or "horizontal-split" or "vertical-split".
-		show_prompt = false, -- Shows the prompt submitted to Ollama. Can be true (3 lines) or "full".
-		show_model = false, -- Displays which model you are using at the beginning of your chat session.
-		no_auto_close = false, -- Never closes the window automatically.
-		file = false, -- Write the payload to a temporary file to keep the command short.
-		hidden = false, -- Hide the generation window (if true, will implicitly set `prompt.replace = true`), requires Neovim >= 0.10
-		init = function(options) pcall(io.popen, "ollama serve > /dev/null 2>&1 &") end,
-		-- Function to initialize Ollama
-		command = function(options)
-			local body = {model = options.model, stream = true}
-			return "curl --silent --no-buffer -X POST http://" .. options.host .. ":" .. options.port .. "/api/chat -d $body"
-		end,
-		-- The command for the Ollama service. You can use placeholders $prompt, $model and $body (shellescaped).
-		-- This can also be a command string.
-		-- The executed command must return a JSON object with { response, context }
-		-- (context property is optional).
-		-- list_models = '<omitted lua function>', -- Retrieves a list of model names
-		result_filetype = "markdown", -- Configure filetype of the result buffer
-		debug = false -- Prints errors and the command which is run.
-	})
+require('orgmode').setup({
+	org_agenda_files = '~/orgfiles/**/*',
+	org_default_notes_file = '~/orgfiles/refile.org'
+})
