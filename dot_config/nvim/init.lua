@@ -17,6 +17,7 @@ vim.o.mouse = ''
 
 vim.keymap.set('n', '<C-h>', ':bprevious<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-l>', ':bnext<CR>', { noremap = true, silent = true })
+vim.keymap.set('t', '<C-[>', [[<C-\><C-n>]])
 
 local vim = vim
 local Plug = vim.fn['plug#']
@@ -28,7 +29,6 @@ Plug('nvim-treesitter/nvim-treesitter')
 Plug('vim-denops/denops.vim')
 Plug('vim-skk/skkeleton')
 Plug('folke/tokyonight.nvim')
--- Plug('Mofiqul/dracula.nvim')
 Plug('nvim-lualine/lualine.nvim')
 Plug('lukas-reineke/indent-blankline.nvim')
 Plug('akinsho/bufferline.nvim')
@@ -42,7 +42,6 @@ Plug('David-Kunz/gen.nvim')
 Plug('chomosuke/typst-preview.nvim')
 Plug('akinsho/toggleterm.nvim')
 Plug('HiPhish/rainbow-delimiters.nvim')
-Plug('nvimdev/dashboard-nvim')
 Plug('norcalli/nvim-colorizer.lua')
 Plug('nvim-orgmode/orgmode')
 Plug('neovim/nvim-lspconfig')
@@ -51,21 +50,23 @@ Plug('hrsh7th/cmp-buffer')
 Plug('hrsh7th/cmp-path')
 Plug('hrsh7th/cmp-cmdline')
 Plug('hrsh7th/nvim-cmp')
+Plug('hrsh7th/cmp-vsnip')
+Plug('hrsh7th/vim-vsnip')
 vim.call('plug#end')
-local logo = {
-	"╔═╗ ╔╗╔═══╗╔═══╗╔╗  ╔╗╔══╗╔═╗╔═╗              ╔═══╗       ╔╗      ╔╗                     ╔╗╔╗╔╗",
-	"║║╚╗║║║╔══╝║╔═╗║║╚╗╔╝║╚╣╠╝║║╚╝║║              ║╔═╗║       ║║      ║║                     ║║║║║║",
-	"║╔╗╚╝║║╚══╗║║ ║║╚╗║║╔╝ ║║ ║╔╗╔╗║    ╔╗╔═╗     ║║ ║║╔═╗╔══╗║╚═╗    ║║   ╔╗╔═╗ ╔╗╔╗╔╗╔╗    ║║║║║║",
-	"║║╚╗║║║╔══╝║║ ║║ ║╚╝║  ║║ ║║║║║║    ╠╣║╔╗╗    ║╚═╝║║╔╝║╔═╝║╔╗║    ║║ ╔╗╠╣║╔╗╗║║║║╚╬╬╝    ╚╝╚╝╚╝",
-	"║║ ║║║║╚══╗║╚═╝║ ╚╗╔╝ ╔╣╠╗║║║║║║    ║║║║║║    ║╔═╗║║║ ║╚═╗║║║║    ║╚═╝║║║║║║║║╚╝║╔╬╬╗    ╔╗╔╗╔╗",
-	"╚╝ ╚═╝╚═══╝╚═══╝  ╚╝  ╚══╝╚╝╚╝╚╝    ╚╝╚╝╚╝    ╚╝ ╚╝╚╝ ╚══╝╚╝╚╝    ╚═══╝╚╝╚╝╚╝╚══╝╚╝╚╝    ╚╝╚╝╚╝",
-}
+-- local logo = {
+-- 	"╔═╗ ╔╗╔═══╗╔═══╗╔╗  ╔╗╔══╗╔═╗╔═╗              ╔═══╗       ╔╗      ╔╗                     ╔╗╔╗╔╗",
+-- 	"║║╚╗║║║╔══╝║╔═╗║║╚╗╔╝║╚╣╠╝║║╚╝║║              ║╔═╗║       ║║      ║║                     ║║║║║║",
+-- 	"║╔╗╚╝║║╚══╗║║ ║║╚╗║║╔╝ ║║ ║╔╗╔╗║    ╔╗╔═╗     ║║ ║║╔═╗╔══╗║╚═╗    ║║   ╔╗╔═╗ ╔╗╔╗╔╗╔╗    ║║║║║║",
+-- 	"║║╚╗║║║╔══╝║║ ║║ ║╚╝║  ║║ ║║║║║║    ╠╣║╔╗╗    ║╚═╝║║╔╝║╔═╝║╔╗║    ║║ ╔╗╠╣║╔╗╗║║║║╚╬╬╝    ╚╝╚╝╚╝",
+-- 	"║║ ║║║║╚══╗║╚═╝║ ╚╗╔╝ ╔╣╠╗║║║║║║    ║║║║║║    ║╔═╗║║║ ║╚═╗║║║║    ║╚═╝║║║║║║║║╚╝║╔╬╬╗    ╔╗╔╗╔╗",
+-- 	"╚╝ ╚═╝╚═══╝╚═══╝  ╚╝  ╚══╝╚╝╚╝╚╝    ╚╝╚╝╚╝    ╚╝ ╚╝╚╝ ╚══╝╚╝╚╝    ╚═══╝╚╝╚╝╚╝╚══╝╚╝╚╝    ╚╝╚╝╚╝",
+-- }
 
-require('dashboard').setup{
-	config = {
-		header = logo
-	}
-}
+-- require('dashboard').setup{
+-- 	config = {
+-- 		header = logo
+-- 	}
+-- }
 
 require('colorizer').setup()
 
@@ -128,11 +129,11 @@ cmp.setup({
 	snippet = {
 		-- REQUIRED - you must specify a snippet engine
 		expand = function(args)
-			-- vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
+			vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
 			-- require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
 			-- require('snippy').expand_snippet(args.body) -- For `snippy` users.
 			-- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
-			vim.snippet.expand(args.body) -- For native neovim snippets (Neovim v0.10+)
+			-- vim.snippet.expand(args.body) -- For native neovim snippets (Neovim v0.10+)
 
 			-- For `mini.snippets` users:
 			-- local insert = MiniSnippets.config.expand.insert or MiniSnippets.default_insert
@@ -154,14 +155,14 @@ cmp.setup({
 	}),
 	sources = cmp.config.sources({
 		{ name = 'nvim_lsp' },
-		-- { name = 'vsnip' }, -- For vsnip users.
+		{ name = 'vsnip' }, -- For vsnip users.
 		-- { name = 'luasnip' }, -- For luasnip users.
 		-- { name = 'ultisnips' }, -- For ultisnips users.
 		-- { name = 'snippy' }, -- For snippy users.
+		{ name = 'skkeleton' },
+		{ name = 'orgmode' }
 	}, {
 		{ name = 'buffer' },
-	}, {
-		{ name = 'skkeleton' }
 	})
 })
 
@@ -237,4 +238,11 @@ require('gen').setup({
 require('orgmode').setup({
 	org_agenda_files = '~/orgfiles/**/*',
 	org_default_notes_file = '~/orgfiles/refile.org'
+})
+
+vim.api.nvim_create_autocmd("VimEnter", {
+	callback = function()
+		vim.cmd("terminal")
+		-- vim.cmd("startinsert")
+	end
 })
