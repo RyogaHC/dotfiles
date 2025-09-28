@@ -1,0 +1,8 @@
+[font.normal]
+family = "Noto Sans Mono"
+[font]
+size = 7.0
+[window]
+opacity = 0.8
+[colors.primary]
+background = "#000000"
