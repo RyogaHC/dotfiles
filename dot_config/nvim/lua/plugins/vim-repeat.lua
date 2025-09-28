@@ -1,4 +1,3 @@
 return {
-	'tpope/vim-repeat',
-	lazy = true
+	'tpope/vim-repeat'
 }
