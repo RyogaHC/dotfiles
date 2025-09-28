@@ -1,4 +1,4 @@
 deno-canary-bin
-deno-canary-bin-debug
+tokyonight-gtk-theme-git
 yay
 yay-debug
