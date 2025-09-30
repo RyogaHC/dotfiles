@@ -204,7 +204,7 @@ gaps outer 5
 default_border pixel 1
 default_floating_border pixel 1
 
-client.focused #ffffff #ffffff #ffffff #ffffff #00ffd2
+client.focused #00ffd2 #00ffd2 #00ffd2 #00ffd2
 
 exec --no-startup-id ~/.fehbg
 exec --no-startup-id picom
