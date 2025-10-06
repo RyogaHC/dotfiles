@@ -6,6 +6,8 @@ set -o vi
 eval "$(fzf --bash)"
 
 export PS1="\[\e[34m\]\u@\h\[\e[m\]:\[\e[31m\]\w\[\e[m\]\$ "
+alias vlimes='sbcl --load ~/.local/share/nvim/lazy/vlime/lisp/start-vlime.lisp'
+alias wkm=wikiman
 
 {{ if (eq .chezmoi.arch "amd64") }}
 export PATH="$PATH:/opt/freerdp-nightly/bin:/home/ryoga/.bin:~/bin"

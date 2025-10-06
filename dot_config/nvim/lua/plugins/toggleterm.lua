@@ -3,7 +3,7 @@ return {
 	version = "*",
 	config = function()
 		require("toggleterm").setup{
-			open_mapping = [[<c-t>]]
+			open_mapping = [[<c-/>]]
 		}
 	end
 }
