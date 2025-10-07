@@ -5,7 +5,7 @@ set -o vi
 
 eval "$(fzf --bash)"
 
-export PS1="\[\e[34m\]\u@\h\[\e[m\]:\[\e[31m\]\w\[\e[m\]\$ "
+export PS1="\[\e[38;2;0;255;210m\]\u@\h\[\e[m\]:\[\e[38;2;255;68;153m\]\w\[\e[m\]\$ "
 alias vlimes='sbcl --load ~/.local/share/nvim/lazy/vlime/lisp/start-vlime.lisp'
 alias wkm=wikiman
 
@@ -13,7 +13,14 @@ alias wkm=wikiman
 export PATH="$PATH:/opt/freerdp-nightly/bin:/home/ryoga/.bin:~/bin"
 export PATH=/home/ryoga/.local/bin:/home/ryoga/venv/bin:$PATH
 
-alias cb='xsel -b'
+# alias cb='xsel -b'
+cb() {
+	if [ -t 0 ]; then
+		wl-paste
+	else
+		wl-copy
+	fi
+}
 {{ end }}
 
 {{ if (eq .chezmoi.arch "arm64") }}
