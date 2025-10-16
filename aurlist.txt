@@ -1,4 +1,11 @@
+chatbox-bin
 deno-canary-bin
+lobehub-desktop-beta-bin
+onlyoffice-bin
+python-llm
+python-llm-ollama
+teams-for-linux
 tokyonight-gtk-theme-git
+wxmaxima
 yay
 yay-debug

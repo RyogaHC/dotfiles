@@ -8,7 +8,7 @@ return  {
 			highlight = {
 				enable = true
 			},
-			ensure_installed = {'typst', 'lua', 'vim', 'c'}
+			ensure_installed = {'typst', 'lua', 'vim', 'c', 'commonlisp', 'python', 'bash'}
 		}
 	end
 }
