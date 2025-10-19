@@ -110,9 +110,11 @@ export EDITOR='nvim'
 alias vlimes='sbcl --load ~/.local/share/nvim/lazy/vlime/lisp/start-vlime.lisp'
 alias wkm=wikiman
 alias nvid=neovide
+alias sshhome='ssh $(cat ~/.sshpc)'
+alias wolhome='wol -i $(cat ~/.domain) $(cat ~/.macaddr) -p 9'
 
 {{ if (eq .chezmoi.arch "amd64") }}
-export PATH="$PATH:~/.bin"
+export PATH="$PATH:/home/ryoga/.bin"
 
 cb() {
 	if [ -t 0 ]; then
