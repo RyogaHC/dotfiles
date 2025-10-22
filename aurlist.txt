@@ -1,5 +1,5 @@
 chatbox-bin
-deno-canary-bin
+gnu-netcat
 lobehub-desktop-beta-bin
 onlyoffice-bin
 python-llm
