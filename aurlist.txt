@@ -2,8 +2,10 @@ chatbox-bin
 gnu-netcat
 lobehub-desktop-beta-bin
 onlyoffice-bin
+opentabletdriver
 python-llm
 python-llm-ollama
+python-llm-openrouter
 teams-for-linux
 tokyonight-gtk-theme-git
 wxmaxima

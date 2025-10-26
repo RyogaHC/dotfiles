@@ -23,3 +23,9 @@ pacman -Qqem > aurlist.txt
 6. Execute `sudo systemctl --user enable syncthing`, and configure properly.
 7. Copy `.git-*` and `.ppng-path` from my Syncthing folder into `~`.
 8. 細かいとこいろいろやる。
+
+## Other Screenshots of my i3
+![Screenshot](images/2.png)
+The left window is Neovim.
+![Screenshot](images/3.png)
+Fastfetch
