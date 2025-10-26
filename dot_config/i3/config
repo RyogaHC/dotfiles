@@ -50,8 +50,10 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec alacritty
-bindsym $mod+Shift+Return exec neovide
+bindsym $mod+w exec alacritty
+bindsym $mod+Shift+w exec neovide
+bindsym $mod+b exec luakit
+bindsym $mod+p exec scrot
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -99,12 +101,12 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+# bindsym $mod+s layout stacking
+# bindsym $mod+w layout tabbed
+bindsym $mod+s layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+e floating toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
@@ -113,7 +115,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # focus the child container
-#bindsym $mod+d focus child
+bindsym $mod+i focus child
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -198,13 +200,20 @@ exec --no-startup-id polybar
 
 title_align center
 
-gaps inner 10
-gaps outer 5
+gaps inner 20
+gaps outer 10
 
-default_border pixel 1
-default_floating_border pixel 1
+for_window [class="^.*"] border pixel 1
+# default_border pixel 2
+# default_floating_border pixel 1
 
 client.focused #00ffd2 #00ffd2 #00ffd2 #00ffd2
+client.unfocused #00000000 #00000000 #00000000 #00000000
+# client.focused #ff4499 #ff4499 #ff4499 #ff4499
+
+hide_edge_borders both
 
 exec --no-startup-id ~/.fehbg
 exec --no-startup-id picom
+exec --no-startup-id fcitx5 -d
+exec --no-startup-id otd-daemon

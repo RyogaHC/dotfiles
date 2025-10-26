@@ -116,14 +116,16 @@ alias wolhome='wol -i $(cat ~/.domain) $(cat ~/.macaddr) -p 9'
 
 {{ if (eq .chezmoi.arch "amd64") }}
 export PATH="$PATH:/home/ryoga/.bin"
+alias cb='xsel -b'
 
-cb() {
-	if [ -t 0 ]; then
-		wl-paste
-	else
-		wl-copy -n
-	fi
-}
+## cb() {
+## 	if [ -t 0 ]; then
+## 		wl-paste
+## 	else
+## 		wl-copy -n
+## 	fi
+## }
+
 {{ end }}
 
 {{ if (eq .chezmoi.arch "arm64") }}
