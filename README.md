@@ -1,7 +1,7 @@
 # My Personal Dotfiles
 This is just for my personal configuration management.
 I am using Chezmoi to manage my dotfiles, so files which start with `.` are replaced with `dot_`.
-![A screen shot of my i3](image/1.png)
+![A screen shot of my i3](images/1.png)
 
 ## Requirements
 I use Arch , and packages I have installed are written in `pkglist.txt` for packages of the official repos, and `aurlist.txt` for AUR packages.
