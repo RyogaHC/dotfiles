@@ -213,6 +213,8 @@ client.unfocused #00000000 #00000000 #00000000 #00000000
 
 hide_edge_borders both
 
+focus_follows_mouse no
+
 exec --no-startup-id ~/.fehbg
 exec --no-startup-id picom
 exec --no-startup-id fcitx5 -d
