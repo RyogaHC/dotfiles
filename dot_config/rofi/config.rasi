@@ -1,18 +1,19 @@
 * {
 	normal-background: #00000000;
 	alternate-normal-background: #00000000;
-	background: #00000088;
+	background: #00000044;
 	foreground: #ffffff;
-	border-color: #00ffd2;
-	selected-normal-background: #000000;
-	selected-normal-foreground: #ff4499;
+	border-color: #000000;
+	selected-normal-background: #ffffff44;
+	selected-normal-foreground: #00ffd2;
 }
 
 window {
-	border: 1;
-	padding: 0;
+	border: 0;
+	padding: 10;
 }
 
 element {
-	border: 1;
+	border-radius: 5;
+	padding: 5;
 }
