@@ -217,9 +217,11 @@ hide_edge_borders both
 
 focus_follows_mouse no
 
-exec --no-startup-id ~/.fehbg
+exec_always --no-startup-id feh --no-fehbg --bg-scale "$HOME/wallpaper"
+
 exec --no-startup-id picom
 exec --no-startup-id fcitx5 -d
 exec --no-startup-id otd-daemon
 exec --no-startup-id xdg-settings set default-web-browser luakit.desktop
 exec --no-startup-id dunst
+exec --no-startup-id discord --start-minimized
