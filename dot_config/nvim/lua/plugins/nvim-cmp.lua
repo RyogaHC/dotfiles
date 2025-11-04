@@ -39,6 +39,7 @@ return {
 				-- { name = 'ultisnips' }, -- For ultisnips users.
 				-- { name = 'snippy' }, -- For snippy users.
 				{ name = 'skkeleton' },
+				{ name = 'skkeleton_okuri' },
 				{ name = 'orgmode' }
 			}, {
 				{ name = 'buffer' },
