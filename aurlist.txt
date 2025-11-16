@@ -1,6 +1,11 @@
+arduino-ide-bin
 chatbox-bin
-gnu-netcat
+coolterm-bin
+darling-bin
+debtap
 lobehub-desktop-beta-bin
+logseq-desktop-bin
+obs-plugin-input-overlay-bin
 onlyoffice-bin
 opentabletdriver
 python-llm
@@ -8,6 +13,8 @@ python-llm-ollama
 python-llm-openrouter
 teams-for-linux
 tokyonight-gtk-theme-git
+winetricks-git
 wxmaxima
+x2goclient
 yay
 yay-debug
