@@ -107,12 +107,14 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 source <(fzf --zsh)
+source <(zoxide init zsh)
 export EDITOR='nvim'
 alias vlimes='sbcl --load ~/.local/share/nvim/lazy/vlime/lisp/start-vlime.lisp'
 alias wkm='wikiman -H luakit'
 alias nvid=neovide
 alias sshhome='ssh $(cat ~/.sshpc)'
 alias wolhome='wol -i $(cat ~/.domain) $(cat ~/.macaddr) -p 9'
+export GOOGLE_CLOUD_PROJECT="quantum-keep-479207-d7"
 
 {{ if (eq .chezmoi.arch "amd64") }}
 export PATH="$PATH:/home/ryoga/.bin"

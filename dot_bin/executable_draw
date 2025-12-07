@@ -1,0 +1,36 @@
+#!/usr/bin/env python3
+import sys
+from tkinter import Tk, Canvas
+from PIL import Image, ImageDraw
+
+width, height = 1024, 256
+image = Image.new("RGB", (width, height), "white")
+draw = ImageDraw.Draw(image)
+brush_radius = 1
+brush_radius_erase = 2
+
+def paint_left(event):
+    x, y = event.x, event.y
+    draw.ellipse([x-brush_radius, y-brush_radius, x+brush_radius, y+brush_radius], fill="black", outline="black")
+    canvas.create_oval(x-brush_radius, y-brush_radius, x+brush_radius, y+brush_radius, fill="black", outline="black")
+
+def paint_right(event):
+    x, y = event.x, event.y
+    draw.ellipse([x-brush_radius_erase, y-brush_radius_erase, x+brush_radius_erase, y+brush_radius_erase], fill="white", outline="white")
+    canvas.create_oval(x-brush_radius_erase, y-brush_radius_erase, x+brush_radius_erase, y+brush_radius_erase, fill="white", outline="white")
+
+def save(event=None):
+    image.save(sys.stdout.buffer, format="PNG")
+    root.destroy()
+
+root = Tk()
+root.title("Draw")
+
+canvas = Canvas(root, width=width, height=height, bg="white")
+canvas.pack()
+canvas.bind("<B1-Motion>", paint_left)
+canvas.bind("<B3-Motion>", paint_right)
+
+root.bind("<Return>", save)
+
+root.mainloop()

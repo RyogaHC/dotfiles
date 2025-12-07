@@ -1,7 +1,8 @@
 [font.normal]
 family = "Noto Sans Mono"
 [font]
-size = 12
+size = 12 # Hyprland用
+# size = 8 # i3
 [window]
 opacity = 0.7
 padding = {x = 4, y = 4}

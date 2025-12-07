@@ -1,0 +1,3 @@
+#!/bin/bash
+
+curl -s -X POST -F "resized_shape=768" -F "embed_step= $, $ " -F "isolated_step=$$\n, \n$$" -F "image=@-;type=image" http://localhost:8503/pix2text | jq -r ".results"
