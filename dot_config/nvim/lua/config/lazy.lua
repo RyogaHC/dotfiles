@@ -36,12 +36,15 @@ vim.o.background = 'dark'
 vim.o.mouse = ''
 vim.o.winblend = 0
 vim.o.pumblend = 0
-vim.g.mapleader = " "
-vim.g.maplocalleader = "\\"
+vim.g.mapleader = "\\"
+vim.g.maplocalleader = " "
+vim.o.spell = true
+vim.o.spelllang = "cjk,en"
 
 vim.keymap.set('n', '<C-h>', ':bprevious<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-l>', ':bnext<CR>', { noremap = true, silent = true })
 vim.keymap.set('t', '<C-[>', [[<C-\><C-n>]])
+vim.keymap.set('i', '<C-l>', '<C-g>u<Esc>[s1z=`]a<C-g>u', {noremap = true, silent = true})
 
 
 -- Setup lazy.nvim
