@@ -1,17 +1,7 @@
 #!/usr/bin/env perl
-$do_cd = 1;
 
-$pdf_mode = 3;
-$latex = 'uplatex -synctex=1 -file-line-error -halt-on-error %O %S';
-$dvipdf = 'dvipdfmx %O -o %D %S';
-$max_repeat = 5;
-$bibtex_use=2;
-$bibtex = 'upbibtex %O %S';
-$biber = 'biber --bblencoding=utf8 -u -U --output_safechars %O %S';
-$makeindex = 'upmendex %O -o %D %S -s jpbase';
-$dvi_previewer = "open %S";
-$pdf_previewer = "open %S";
-$out_dir = ".";
-$emulate_aux = 1;
-$aux_dir = ".tex_intermediates";
-$clean_ext="$clean_ext run.xml";
+# LuaLaTeXをコンパイラとして使う
+$pdflatex = 'lualatex';
+
+# PDFファイルを直接出力するモードを有効にする
+$pdf_mode = 1;

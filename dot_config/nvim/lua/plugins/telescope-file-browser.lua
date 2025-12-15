@@ -1,5 +1,6 @@
 return {
 	"nvim-telescope/telescope-file-browser.nvim",
+	event = "VeryLazy",
 	config = function ()
 		vim.keymap.set("n", "<space>fb", ":Telescope file_browser<CR>")
 	end,

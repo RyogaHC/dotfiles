@@ -1,10 +1,10 @@
 return {
 	"folke/tokyonight.nvim",
-	lazy = false,
+	lazy = true,
 	priority = 1000,
 	opts = {},
 	config = function()
-		require('tokyonight').setup{
+		require('tokyonight').setup {
 			transparent = true,
 			styles = {
 				sidebars = "transparent",
@@ -12,6 +12,7 @@ return {
 
 			}
 		}
-		vim.cmd('colorscheme tokyonight-night')
-	end
+		-- vim.cmd('colorscheme tokyonight-night')
+	end,
+	event = "VimEnter"
 }

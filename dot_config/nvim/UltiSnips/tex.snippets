@@ -13,13 +13,14 @@ endglobal
 
 
 snippet template "Basic template" b
-\documentclass[a4paper]{article}
+\documentclass{jlreq}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{textcomp}
 \usepackage[dutch]{babel}
 \usepackage{amsmath, amssymb}
+\usepackage{ascmac}
 
 
 % figure support
@@ -118,13 +119,13 @@ endsnippet
 snippet dm "Math" wA
 \[
 ${1:${VISUAL}}
-.\] $0
+\] $0
 endsnippet
 
 snippet ali "Align" bA
 \begin{align*}
 	${1:${VISUAL}}
-.\end{align*}
+\end{align*}
 endsnippet
 
 
@@ -639,6 +640,14 @@ endsnippet
 
 snippet DD "D" iA
 \mathbb{D}
+endsnippet
+
+
+
+snippet ibox "Item Box" bA
+\\begin{itembox}{${1:解}}
+	$0
+\\end{itembox}
 endsnippet
 
 # vim:ft=snippets

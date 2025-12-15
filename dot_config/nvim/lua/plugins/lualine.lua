@@ -1,11 +1,13 @@
 return {
 	'nvim-lualine/lualine.nvim',
-	dependencies = { 'nvim-tree/nvim-web-devicons' },
+	lazy = true,
+	event = "VimEnter",
+	dependencies = { 'nvim-tree/nvim-web-devicons', 'folke/tokyonight.nvim' },
 	config = function()
 		require('lualine').setup {
 			options = {
 				-- ... your lualine config
-				theme = 'tokyonight'
+				theme = 'neopywal'
 				-- theme = 'dracula-nvim'
 				-- ... your lualine config
 			}

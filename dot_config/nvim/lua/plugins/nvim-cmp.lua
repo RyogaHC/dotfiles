@@ -88,5 +88,8 @@ return {
 		vim.lsp.enable('pylsp')
 		vim.lsp.enable('lua_ls')
 		vim.lsp.enable('clangd')
-	end
+		-- vim.lsp.enable('digestif')
+		vim.lsp.enable('texlab')
+	end,
+	event = {"InsertEnter", "CmdlineEnter"}
 }

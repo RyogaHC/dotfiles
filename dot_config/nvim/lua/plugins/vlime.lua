@@ -1,3 +1,5 @@
 return {
-	"vlime/vlime"
+	"vlime/vlime",
+	ft = "lisp",
+	lazy = true
 }

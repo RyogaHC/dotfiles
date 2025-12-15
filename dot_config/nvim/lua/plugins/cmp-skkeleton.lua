@@ -1,3 +1,5 @@
 return {
-	"uga-rosa/cmp-skkeleton"
+	"uga-rosa/cmp-skkeleton",
+	lazy = true,
+	event = {"CmdlineEnter", "InsertEnter"}
 }

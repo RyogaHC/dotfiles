@@ -50,7 +50,7 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+w exec alacritty
+bindsym $mod+w exec kitty
 bindsym $mod+Shift+w exec neovide
 bindsym $mod+b exec luakit
 bindsym $mod+p exec scrot
@@ -228,3 +228,6 @@ exec --no-startup-id dunst
 exec --no-startup-id discord --start-minimized
 exec_always --no-startup-id autorandr -c
 exec --no-startup-id onboard
+exec --no-startup-id inkscape-figures watch
+exec --no-startup-id python3 ~/inkscape-shortcut-manager/main.py
+exec --no-startup-id wal -i "$HOME/wallpaper" -a 0.7
