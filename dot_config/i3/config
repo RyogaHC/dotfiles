@@ -230,4 +230,4 @@ exec_always --no-startup-id autorandr -c
 exec --no-startup-id onboard
 exec --no-startup-id inkscape-figures watch
 exec --no-startup-id python3 ~/inkscape-shortcut-manager/main.py
-exec --no-startup-id wal -i "$HOME/wallpaper" -a 0.7
+exec_always --no-startup-id wal -i "$HOME/wallpaper" -a 0.7

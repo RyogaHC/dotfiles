@@ -1,4 +1,4 @@
-@import "~/.cache/wal/colors-rofi-light"
+@import "~/.cache/wal/colors-rofi-dark"
 // * {
 // 	normal-background: #00000000;
 // 	alternate-normal-background: #00000000;
