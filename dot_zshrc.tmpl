@@ -118,7 +118,15 @@ export GOOGLE_CLOUD_PROJECT="quantum-keep-479207-d7"
 
 {{ if (eq .chezmoi.arch "amd64") }}
 export PATH="$PATH:/home/ryoga/.bin"
-alias cb='xsel -b'
+## alias cb='xsel -b'
+
+cb() {
+	if [ -t 0 ]; then
+		xclip -i -sel c
+	else
+		xclip -o -sel c
+	fi
+}
 
 ## cb() {
 ## 	if [ -t 0 ]; then

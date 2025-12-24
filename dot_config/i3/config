@@ -53,7 +53,6 @@ tiling_drag modifier titlebar
 bindsym $mod+w exec kitty
 bindsym $mod+Shift+w exec neovide
 bindsym $mod+b exec luakit
-bindsym $mod+p exec scrot
 bindsym $mod+o exec dbus-send --type=method_call --print-reply --dest=org.onboard.Onboard /org/onboard/Onboard/Keyboard org.onboard.Onboard.Keyboard.ToggleVisible
 
 # kill focused window
@@ -195,7 +194,9 @@ bindsym $mod+r mode "resize"
 #         status_command i3status
 # }
 
-bindsym Print exec --no-startup-id scrot ~/Pictures/$(date +%Y%m%d-%H%M%S).png
+# bindsym Print exec --no-startup-id scrot ~/Pictures/$(date +%Y%m%d-%H%M%S).png
+bindsym $mod+p exec --no-startup-id maim -s | xclip -i -sel c -t image/png
+bindsym $mod+Shift+p exec --no-startup-id maim | xclip -i -sel c -t image/png
 
 exec --no-startup-id polybar
 
@@ -223,11 +224,12 @@ exec_always --no-startup-id feh --no-fehbg --bg-scale "$HOME/wallpaper"
 exec --no-startup-id picom
 exec --no-startup-id fcitx5 -d
 exec --no-startup-id otd-daemon
-exec --no-startup-id xdg-settings set default-web-browser luakit.desktop
+# exec --no-startup-id xdg-settings set default-web-browser luakit.desktop
 exec --no-startup-id dunst
 exec --no-startup-id discord --start-minimized
 exec_always --no-startup-id autorandr -c
 exec --no-startup-id onboard
-exec --no-startup-id inkscape-figures watch
-exec --no-startup-id python3 ~/inkscape-shortcut-manager/main.py
+# exec --no-startup-id inkscape-figures watch
+# exec --no-startup-id python3 ~/inkscape-shortcut-manager/main.py
 exec_always --no-startup-id wal -i "$HOME/wallpaper" -a 0.7
+# exec --no-startup-id redshift
