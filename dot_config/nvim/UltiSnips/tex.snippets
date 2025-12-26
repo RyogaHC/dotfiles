@@ -18,7 +18,6 @@ snippet template "Basic template" b
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{textcomp}
-\usepackage[dutch]{babel}
 \usepackage{amsmath, amssymb}
 \usepackage{ascmac}
 
@@ -26,15 +25,12 @@ snippet template "Basic template" b
 % figure support
 \usepackage{import}
 \usepackage{xifthen}
-\pdfminorversion=7
 \usepackage{pdfpages}
 \usepackage{transparent}
 \newcommand{\incfig}[1]{%
 	\def\svgwidth{\columnwidth}
 	\import{./figures/}{#1.pdf_tex}
 }
-
-\pdfsuppresswarningpagegroup=1
 
 \begin{document}
 	$0
@@ -648,6 +644,10 @@ snippet ibox "Item Box" bA
 \\begin{itembox}{${1:解}}
 	$0
 \\end{itembox}
+endsnippet
+
+snippet "(\\?\w+)(,\.|\.,)" "Vector postfix" riA
+\vec{`!p snip.rv=match.group(1)`}
 endsnippet
 
 # vim:ft=snippets

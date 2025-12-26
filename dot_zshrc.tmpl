@@ -122,9 +122,9 @@ export PATH="$PATH:/home/ryoga/.bin"
 
 cb() {
 	if [ -t 0 ]; then
-		xclip -i -sel c
-	else
 		xclip -o -sel c
+	else
+		xclip -i -sel c
 	fi
 }
 
