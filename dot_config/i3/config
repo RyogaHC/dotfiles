@@ -53,7 +53,7 @@ tiling_drag modifier titlebar
 bindsym $mod+w exec kitty
 bindsym $mod+Shift+w exec neovide
 bindsym $mod+b exec luakit
-bindsym $mod+o exec dbus-send --type=method_call --print-reply --dest=org.onboard.Onboard /org/onboard/Onboard/Keyboard org.onboard.Onboard.Keyboard.ToggleVisible
+# bindsym $mod+o exec dbus-send --type=method_call --print-reply --dest=org.onboard.Onboard /org/onboard/Onboard/Keyboard org.onboard.Onboard.Keyboard.ToggleVisible
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -197,6 +197,7 @@ bindsym $mod+r mode "resize"
 # bindsym Print exec --no-startup-id scrot ~/Pictures/$(date +%Y%m%d-%H%M%S).png
 bindsym $mod+p exec --no-startup-id maim -s | xclip -i -sel c -t image/png
 bindsym $mod+Shift+p exec --no-startup-id maim | xclip -i -sel c -t image/png
+# bindsym $mod+o exec --no-startup-id maim -s | ~/.bin/img2formula | xclip -i -sel c
 
 exec --no-startup-id polybar
 
@@ -229,8 +230,10 @@ exec --no-startup-id dunst
 exec --no-startup-id discord --start-minimized
 exec_always --no-startup-id autorandr -c
 exec --no-startup-id onboard
-# exec --no-startup-id inkscape-figures watch
-# exec --no-startup-id python3 ~/inkscape-shortcut-manager/main.py
+
+exec --no-startup-id inkscape-figures watch
+exec --no-startup-id python3 ~/inkscape-shortcut-manager/main.py
+
 exec_always --no-startup-id wal -i "$HOME/wallpaper" -a 0.7
-# exec --no-startup-id redshift
+exec --no-startup-id redshift
 exec --no-startup-id kdeconnectd

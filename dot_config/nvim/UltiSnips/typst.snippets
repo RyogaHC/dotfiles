@@ -30,6 +30,16 @@ snippet tmp "Template" bA
   #pagebreak()
   ]
 )
+
+#let kadai(num, a, kekka, kosatu) = [
+  == 課題 #num
+  #a
+  === 結果
+  #kekka
+  === 考察
+  #kosatu
+]
+
 $0
 endsnippet
 
@@ -125,3 +135,12 @@ priority 100
 snippet "([a-zA-Z])bar" "bar" riA
 overline{`!p snip.rv=match.group(1)`}
 endsnippet
+
+snippet kadai "kadai"
+#kadai(
+  [$1],
+  [$2],
+  [$3],
+  [$4]
+)
+endsnippet	

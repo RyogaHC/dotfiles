@@ -262,7 +262,7 @@ snippet conj "conjugate" iA
 endsnippet
 
 snippet sum "sum" w
-\sum_{n=${1:1}}^{${2:\infty}} ${3:a_n z^n}
+\sum_{k=${1:1}}^{${2:\infty}} ${3:k}
 endsnippet
 
 snippet taylor "taylor" w
@@ -649,5 +649,62 @@ endsnippet
 snippet "(\\?\w+)(,\.|\.,)" "Vector postfix" riA
 \vec{`!p snip.rv=match.group(1)`}
 endsnippet
+
+snippet kaisetu "kaisetu" bA
+\begin{tcolorbox}[title=問題：$1, breakable]
+	$2 \\\\
+	\hrulefill \\\\
+
+	\subsection*{解法}
+
+	$3
+
+	\hrulefill \\\\
+	\subsection*{注目}
+
+	\begin{description}
+		\item[$4] $5
+	\end{description}
+
+	\subsection*{別解}
+
+	\begin{description}
+		\item[$6] $7
+			\begin{screen}
+				\begin{description}
+					\item[使わない理由] $8
+					\item[優先して使う場合] $9
+				\end{description}
+			\end{screen}
+	\end{description}
+
+	\subsection*{問題に当てはまらない考え方とその理由}
+
+	\begin{itemize}
+		\item $10
+			\begin{screen}
+				\begin{description}
+					\item[当てはまらない理由] $11
+					\item[考える場合の例] $12
+				\end{description}
+			\end{screen}
+	\end{itemize}
+
+	\subsection*{FAQ}
+	\begin{itembox}{質問}
+		$13
+	\end{itembox}
+	\begin{itembox}{回答}
+		$14
+	\end{itembox}
+
+	\subsection*{類題}
+
+	$15
+\end{tcolorbox}
+
+$0
+endsnippet
+	
 
 # vim:ft=snippets
