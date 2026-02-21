@@ -2,7 +2,7 @@ return {
     "Kurama622/llm.nvim",
     lazy = true,
     dependencies = { "nvim-lua/plenary.nvim", "MunifTanjim/nui.nvim"},
-    cmd = { "LLMSessionToggle", "LLMSelectedTextHandler", "LLMAppHandler" },
+    cmd = { "LLMSessionToggle", "LLMSelectedTextHandler", "LLMAppHandler"},
     config = function()
       require("llm").setup({
         url = "http://localhost:11434/api/chat",
