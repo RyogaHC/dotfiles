@@ -15,25 +15,11 @@ endglobal
 snippet template "Basic template" b
 \documentclass{jlreq}
 
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{textcomp}
 \usepackage{amsmath, amssymb}
 \usepackage{ascmac}
 
-
-% figure support
-\usepackage{import}
-\usepackage{xifthen}
-\usepackage{pdfpages}
-\usepackage{transparent}
-\newcommand{\incfig}[1]{%
-	\def\svgwidth{\columnwidth}
-	\import{./figures/}{#1.pdf_tex}
-}
-
 \begin{document}
-	$0
+$0
 \end{document}
 endsnippet
 
@@ -706,5 +692,21 @@ snippet kaisetu "kaisetu" bA
 $0
 endsnippet
 	
+snippet cornell "cornell" bA
+\begin{cornellpage}{$1}
+	\notebox{
+		$2
+	}
+
+	\cuebox{
+		$3
+	}
+
+	\summarybox{
+		$4
+	}
+\end{cornellpage}
+$0
+endsnippet
 
 # vim:ft=snippets
