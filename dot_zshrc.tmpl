@@ -140,6 +140,7 @@ cb() {
 
 {{ if (eq .chezmoi.arch "arm64") }}
 export PATH="$PATH:~/.bin"
+export PATH="$PATH:$HOME/bin"
 cb() {
 	if [ -t 0 ]; then
 		termux-clipboard-get
