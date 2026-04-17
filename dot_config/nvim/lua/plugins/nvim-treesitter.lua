@@ -15,7 +15,7 @@ return  {
 			indent = {
 				enable = true,
 			},
-			ensure_installed = {'typst', 'lua', 'vim', 'c', 'commonlisp', 'python', 'bash', 'latex'}
+			ensure_installed = {'typst', 'lua', 'vim', 'c', 'commonlisp', 'python', 'bash', 'latex'},
 		}
 	end,
 }
