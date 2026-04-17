@@ -313,6 +313,45 @@ return {
 		),
 		{condition = inmath}
 	),
+	s(
+		{
+			trig = "sec",
+		},
+		fmt(
+			[[
+			\section*{{{1}}}
+			]],
+			{
+				i(1),
+			}
+		),
+	),
+	s(
+		{
+			trig = "sub",
+		},
+		fmt(
+			[[
+			\subsection*{{{1}}}
+			]],
+			{
+				i(1),
+			}
+		),
+	),
+	s(
+		{
+			trig = "par",
+		},
+		fmt(
+			[[
+			\paragraph*{{{1}}}
+			]],
+			{
+				i(1),
+			}
+		),
+	),
 	-- s(
 	-- 	{
 	-- 		trig = "->",
