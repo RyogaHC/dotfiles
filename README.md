@@ -1,3 +1,6 @@
+## Warning!
+This README.md file is too old, and it means nothing anymore...
+
 # My Personal Dotfiles
 This is just for my personal configuration management.
 I am using Chezmoi to manage my dotfiles, so files which start with `.` are replaced with `dot_`.
