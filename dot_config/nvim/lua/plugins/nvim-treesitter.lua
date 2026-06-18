@@ -12,9 +12,9 @@ return  {
 				}
 
 			},
-			indent = {
-				enable = true,
-			},
+			-- indent = {
+			-- 	enable = true,
+			-- },
 			ensure_installed = {'typst', 'lua', 'vim', 'c', 'commonlisp', 'python', 'bash', 'latex'},
 		}
 	end,

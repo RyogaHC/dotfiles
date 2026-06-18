@@ -272,7 +272,7 @@ snippet part "d/dx" w
 endsnippet
 
 context "math()"
-snippet sq "\sqrt{}" iA
+snippet sk "\sqrt{}" iA
 \sqrt{${1:${VISUAL}}} $0
 endsnippet
 
@@ -707,6 +707,11 @@ snippet cornell "cornell" bA
 	}
 \end{cornellpage}
 $0
+endsnippet
+
+context "math()"
+snippet itr "intertext" iA
+\intertext{$1} $0
 endsnippet
 
 # vim:ft=snippets
